@@ -40,6 +40,8 @@ Enter file name for dimension list: SERVICE_TIMES
 
 ## Known Issues
 
+ No known issues at this time.
+
 ## How to obtain support
 
 [Create an issue](https://github.com/SAP-samples/analytics-cloud-data-generator/issues) in this repository if you find a bug or have questions about the content.

@@ -60,7 +60,7 @@ The following parameters are available:
 * Name - should match either the dimension name of a calculated dimension, or the unit of an account.
 * Type - dimension or measure. Controls whether the value is inserted in every row (dimension), or as one of the accounts (measure).
 * Options - stringified JSON for [random-number](https://www.npmjs.com/package/random-number) package. Valid options are covered in the documentation.
-  ** min and max also accept a reserved value of "property" which is covered in the 2nd example.
+  * min and max also accept a reserved value of "property" which is covered in the 2nd example.
 * Ratio - In the BoarderFlag example, the random number generates values between 0.0 and 1.0 and any value less than 0.95 is made zero. This is helpful when you want the majority of values to be a 0 with only a few exceptions. Accepts any value between 0.0 and 1.0.
 * DecimalPlaces - Number of decimal places returned when "integer" is **false**
 * Properties - allows max and min to be dynamically set based on a Dimension attribute. Covered in **CENSUS_STAFFING** example. Must be 0 if not in use.

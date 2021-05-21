@@ -109,6 +109,6 @@ To implement this setting, adjustments to **Options** and **Properties** are nec
 "Options": {"min": "Department_ServiceCount", "max": "Department_MaxOccupancy/Department_ServiceCount"}}
 ```
 
-Where dimension is one of the values in **CENSUS_STAFFING_fields.xlsx** and min and max refer to attributes specified in the **ATT_** sheet. As in the example, the values can be virtually any equation that can be evaluated by https://mathjs.org/index.html evaluate() function.
+Where dimension is one of the values in **CENSUS_STAFFING_fields.xlsx** and min and max refer to attributes specified in the **ATT_** sheet. As in the example, the values can be virtually any equation that can be evaluated by [MathJS](https://mathjs.org/index.html) evaluate() function.
 
 Next, check the [output](../output/) from the generator.

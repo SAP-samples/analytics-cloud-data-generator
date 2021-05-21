@@ -1,0 +1,11 @@
+﻿Member ID,Description
+ADM1,Admissions
+BED1,Beds Available
+BED1_INT,Beds Available (Interim)
+DIS1,Discharges
+MAX_INT,Max Occupancy (Interim)
+MAX1,Max Occupancy
+NUR1,Nurses Staffed
+OCC_PCT,Occupancy
+OCC1,Occupancy
+TRAN1,Transfers

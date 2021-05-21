@@ -1,0 +1,200 @@
+﻿Member ID,Description
+DIAG_1,Abnormality in fetal heart rate and rhythm complicating labor and delivery
+DIAG_2,Acute and chronic respiratory failure with hypercapnia
+DIAG_3,Acute and chronic respiratory failure with hypoxia
+DIAG_4,"Acute and chronic respiratory failure, unspecified whether with hypoxia or hypercapnia"
+DIAG_5,Acute diastolic (congestive) heart failure
+DIAG_6,Acute on chronic combined systolic (congestive) and diastolic (congestive) heart failure
+DIAG_7,Acute on chronic diastolic (congestive) heart failure
+DIAG_8,Acute on chronic systolic (congestive) heart failure
+DIAG_9,Acute postprocedural respiratory failure
+DIAG_10,Acute respiratory failure with hypercapnia
+DIAG_11,Acute respiratory failure with hypoxia
+DIAG_12,"Acute respiratory failure, unspecified whether with hypoxia or hypercapnia"
+DIAG_13,Acute systolic (congestive) heart failure
+DIAG_14,Anemia complicating childbirth
+DIAG_15,Atherosclerotic heart disease of native coronary artery with other forms of angina pectoris
+DIAG_16,Atherosclerotic heart disease of native coronary artery with unspecified angina pectoris
+DIAG_17,Atherosclerotic heart disease of native coronary artery with unstable angina pectoris
+DIAG_18,Atherosclerotic heart disease of native coronary artery without angina pectoris
+DIAG_19,"Bacterial sepsis of newborn, unspecified"
+DIAG_20,Biventricular heart failure
+DIAG_21,Blighted ovum and nonhydatidiform mole
+DIAG_22,Candidal sepsis
+DIAG_23,"Cerebral infarction due to cerebral venous thrombosis, nonpyogenic"
+DIAG_24,Cerebral infarction due to embolism of left middle cerebral artery
+DIAG_25,Cerebral infarction due to embolism of right middle cerebral artery
+DIAG_26,Cerebral infarction due to thrombosis of left middle cerebral artery
+DIAG_27,Cerebral infarction due to thrombosis of left posterior cerebral artery
+DIAG_28,Cerebral infarction due to thrombosis of left vertebral artery
+DIAG_29,Cerebral infarction due to thrombosis of right middle cerebral artery
+DIAG_30,Cerebral infarction due to thrombosis of unspecified cerebral artery
+DIAG_31,Cerebral infarction due to unspecified occlusion or stenosis of basilar artery
+DIAG_32,Cerebral infarction due to unspecified occlusion or stenosis of bilateral carotid arteries
+DIAG_33,Cerebral infarction due to unspecified occlusion or stenosis of bilateral posterior cerebral arteries
+DIAG_34,Cerebral infarction due to unspecified occlusion or stenosis of left anterior cerebral artery
+DIAG_35,Cerebral infarction due to unspecified occlusion or stenosis of left carotid arteries
+DIAG_36,Cerebral infarction due to unspecified occlusion or stenosis of left middle cerebral artery
+DIAG_37,Cerebral infarction due to unspecified occlusion or stenosis of left posterior cerebral artery
+DIAG_38,Cerebral infarction due to unspecified occlusion or stenosis of left vertebral artery
+DIAG_39,Cerebral infarction due to unspecified occlusion or stenosis of other cerebral artery
+DIAG_40,Cerebral infarction due to unspecified occlusion or stenosis of right anterior cerebral artery
+DIAG_41,Cerebral infarction due to unspecified occlusion or stenosis of right carotid arteries
+DIAG_42,Cerebral infarction due to unspecified occlusion or stenosis of right cerebellar artery
+DIAG_43,Cerebral infarction due to unspecified occlusion or stenosis of right middle cerebral artery
+DIAG_44,Cerebral infarction due to unspecified occlusion or stenosis of right posterior cerebral artery
+DIAG_45,Cerebral infarction due to unspecified occlusion or stenosis of right vertebral artery
+DIAG_46,Cerebral infarction due to unspecified occlusion or stenosis of unspecified cerebellar artery
+DIAG_47,Cerebral infarction due to unspecified occlusion or stenosis of unspecified cerebral artery
+DIAG_48,"Cerebral infarction, unspecified"
+DIAG_49,"Cervical shortening, third trimester"
+DIAG_50,"Chest pain, unspecified"
+DIAG_51,Chronic respiratory failure with hypercapnia
+DIAG_52,Chronic respiratory failure with hypoxia
+DIAG_53,"Chronic respiratory failure, unspecified whether with hypoxia or hypercapnia"
+DIAG_54,Chronic systolic (congestive) heart failure
+DIAG_55,"Complete placenta previa nos or without hemorrhage, third trimester"
+DIAG_56,"Complete placenta previa with hemorrhage, third trimester"
+DIAG_57,"Continuing pregnancy after intrauterine death of one fetus or more, second trimester, fetus 1"
+DIAG_58,DignosisName
+DIAG_59,Diseases of the circulatory system complicating childbirth
+DIAG_60,Diseases of the digestive system complicating childbirth
+DIAG_61,Diseases of the nervous system complicating childbirth
+DIAG_62,Diseases of the respiratory system complicating childbirth
+DIAG_63,End stage heart failure
+DIAG_64,"Endocrine, nutritional and metabolic diseases complicating childbirth"
+DIAG_65,First degree perineal laceration during delivery
+DIAG_66,"Full-term premature rupture of membranes, onset of labor within 24 hours of rupture"
+DIAG_67,"Gestational (pregnancy-induced) hypertension without significant proteinuria, complicating childbirth"
+DIAG_68,"Gestational (pregnancy-induced) hypertension without significant proteinuria, third trimester"
+DIAG_69,"Gestational diabetes mellitus in childbirth, insulin controlled"
+DIAG_70,Hb-SS disease with acute chest syndrome
+DIAG_71,"Hb-SS disease with crisis, unspecified"
+DIAG_72,"HELLP syndrome, complicating childbirth"
+DIAG_73,Hemothorax
+DIAG_74,"Hypertensive heart and chronic kidney disease with heart failure and stage 1 through stage 4 chronic kidney disease, or unspecified chronic kidney disease"
+DIAG_75,"Hypertensive heart and chronic kidney disease with heart failure and with stage 5 chronic kidney disease, or end stage renal disease"
+DIAG_76,Hypertensive heart disease with heart failure
+DIAG_77,Infant botulism
+DIAG_78,Ischemic cardiomyopathy
+DIAG_79,"Labor and delivery complicated by other cord entanglement, without compression, not applicable or unspecified"
+DIAG_80,Liver and biliary tract disorders in childbirth
+DIAG_81,"Low lying placenta nos or without hemorrhage, third trimester"
+DIAG_82,"Maternal care for benign tumor of corpus uteri, third trimester"
+DIAG_83,"Maternal care for breech presentation, fetus 1"
+DIAG_84,"Maternal care for breech presentation, not applicable or unspecified"
+DIAG_85,"Maternal care for cervical incompetence, second trimester"
+DIAG_86,"Maternal care for excessive fetal growth, third trimester, not applicable or unspecified"
+DIAG_87,"Maternal care for intrauterine death, not applicable or unspecified"
+DIAG_88,"Maternal care for known or suspected placental insufficiency, third trimester, fetus 2"
+DIAG_89,Maternal care for low transverse scar from previous cesarean delivery
+DIAG_90,"Maternal care for other (suspected) fetal abnormality and damage, not applicable or unspecified"
+DIAG_91,"Maternal care for other known or suspected poor fetal growth, third trimester, not applicable or unspecified"
+DIAG_92,Maternal care for unspecified type scar from previous cesarean delivery
+DIAG_93,Mild intermittent asthma with (acute) exacerbation
+DIAG_94,Mild intermittent asthma with status asthmaticus
+DIAG_95,Mild persistent asthma with (acute) exacerbation
+DIAG_96,Mild persistent asthma with status asthmaticus
+DIAG_97,"Mild to moderate pre-eclampsia, complicating childbirth"
+DIAG_98,Missed abortion
+DIAG_99,Moderate persistent asthma with (acute) exacerbation
+DIAG_100,Moderate persistent asthma with status asthmaticus
+DIAG_101,Myocardial infarction type 2
+DIAG_102,Non-ST elevation (NSTEMI) myocardial infarction
+DIAG_103,Nontraumatic acute subdural hemorrhage
+DIAG_104,Nontraumatic chronic subdural hemorrhage
+DIAG_105,Nontraumatic intracerebral hemorrhage in brain stem
+DIAG_106,Nontraumatic intracerebral hemorrhage in cerebellum
+DIAG_107,"Nontraumatic intracerebral hemorrhage in hemisphere, cortical"
+DIAG_108,"Nontraumatic intracerebral hemorrhage in hemisphere, subcortical"
+DIAG_109,"Nontraumatic intracerebral hemorrhage, unspecified"
+DIAG_110,"Nontraumatic intracranial hemorrhage, unspecified"
+DIAG_111,Nontraumatic subarachnoid hemorrhage from anterior communicating artery
+DIAG_112,Nontraumatic subarachnoid hemorrhage from unspecified intracranial artery
+DIAG_113,"Nontraumatic subarachnoid hemorrhage, unspecified"
+DIAG_114,"Nontraumatic subdural hemorrhage, unspecified"
+DIAG_115,"Obstructed labor due to breech presentation, not applicable or unspecified"
+DIAG_116,Other bacterial sepsis of newborn
+DIAG_117,Other cerebral infarction
+DIAG_118,Other chest pain
+DIAG_119,Other diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism complicating childbirth
+DIAG_120,Other forms of acute ischemic heart disease
+DIAG_121,Other gram-negative sepsis
+DIAG_122,Other immediate postpartum hemorrhage
+DIAG_123,Other mental disorders complicating childbirth
+DIAG_124,Other nontraumatic intracerebral hemorrhage
+DIAG_125,Other nontraumatic subarachnoid hemorrhage
+DIAG_126,Other specified diabetes mellitus with hyperglycemia
+DIAG_127,Other specified diabetes mellitus with ketoacidosis without coma
+DIAG_128,"Other specified pregnancy related conditions, third trimester"
+DIAG_129,Other specified sepsis
+DIAG_130,Other streptococcal sepsis
+DIAG_131,"Placenta accreta, third trimester"
+DIAG_132,"Polyhydramnios, third trimester, not applicable or unspecified"
+DIAG_133,Post-term pregnancy
+DIAG_134,Pre-existing essential hypertension complicating childbirth
+DIAG_135,"Pre-existing hypertension with pre-eclampsia, complicating childbirth"
+DIAG_136,Pre-existing hypertensive chronic kidney disease complicating childbirth
+DIAG_137,"Pre-existing type 2 diabetes mellitus, in childbirth"
+DIAG_138,Precipitate labor
+DIAG_139,"Premature separation of placenta, unspecified, third trimester"
+DIAG_140,"Preterm labor second trimester with preterm delivery second trimester, not applicable or unspecified"
+DIAG_141,"Preterm labor third trimester with preterm delivery third trimester, fetus 2"
+DIAG_142,"Preterm labor third trimester with preterm delivery third trimester, not applicable or unspecified"
+DIAG_143,"Preterm premature rupture of membranes, onset of labor more than 24 hours following rupture, second trimester"
+DIAG_144,"Preterm premature rupture of membranes, onset of labor more than 24 hours following rupture, third trimester"
+DIAG_145,"Preterm premature rupture of membranes, onset of labor within 24 hours of rupture, second trimester"
+DIAG_146,"Preterm premature rupture of membranes, onset of labor within 24 hours of rupture, third trimester"
+DIAG_147,"Preterm premature rupture of membranes, unspecified as to length of time between rupture and onset of labor, second trimester"
+DIAG_148,"Preterm premature rupture of membranes, unspecified as to length of time between rupture and onset of labor, third trimester"
+DIAG_149,Respiratory failure of newborn
+DIAG_150,"Rupture of uterus before onset of labor, second trimester"
+DIAG_151,Salmonella sepsis
+DIAG_152,Second degree perineal laceration during delivery
+DIAG_153,Sepsis due to anaerobes
+DIAG_154,Sepsis due to enterococcus
+DIAG_155,Sepsis due to Escherichia coli (e. coli)
+DIAG_156,Sepsis due to hemophilus influenzae
+DIAG_157,Sepsis due to methicillin resistant Staphylococcus aureus
+DIAG_158,Sepsis due to Methicillin susceptible Staphylococcus aureus
+DIAG_159,Sepsis due to other specified Staphylococcus
+DIAG_160,Sepsis due to Pseudomonas
+DIAG_161,Sepsis due to Streptococcus pneumoniae
+DIAG_162,"Sepsis due to Streptococcus, group A"
+DIAG_163,"Sepsis due to Streptococcus, group B"
+DIAG_164,Sepsis of newborn due to Escherichia coli
+DIAG_165,Sepsis of newborn due to Staphylococcus aureus
+DIAG_166,"Sepsis of newborn due to Streptococcus, group b"
+DIAG_167,"Sepsis, unspecified organism"
+DIAG_168,Severe persistent asthma with (acute) exacerbation
+DIAG_169,Severe persistent asthma with status asthmaticus
+DIAG_170,Severe pre-eclampsia complicating childbirth
+DIAG_171,"Sickle-cell thalassemia with crisis, unspecified"
+DIAG_172,Sickle-cell thalassemia with splenic sequestration
+DIAG_173,"Sickle-cell/Hb-C disease with crisis, unspecified"
+DIAG_174,ST elevation (STEMI) myocardial infarction involving left anterior descending coronary artery
+DIAG_175,ST elevation (STEMI) myocardial infarction involving left circumflex coronary artery
+DIAG_176,ST elevation (STEMI) myocardial infarction involving left main coronary artery
+DIAG_177,ST elevation (STEMI) myocardial infarction involving other coronary artery of anterior wall
+DIAG_178,ST elevation (STEMI) myocardial infarction involving other coronary artery of inferior wall
+DIAG_179,ST elevation (STEMI) myocardial infarction involving other sites
+DIAG_180,St elevation (stemi) myocardial infarction involving right coronary artery
+DIAG_181,ST elevation (STEMI) myocardial infarction of unspecified site
+DIAG_182,"Streptococcal sepsis, unspecified"
+DIAG_183,Streptococcus b carrier state complicating childbirth
+DIAG_184,Systemic inflammatory response syndrome (sirs) of non-infectious origin with acute organ dysfunction
+DIAG_185,Systemic inflammatory response syndrome (sirs) of non-infectious origin without acute organ dysfunction
+DIAG_186,"Twin pregnancy, dichorionic/diamniotic, third trimester"
+DIAG_187,Type 1 diabetes mellitus with hyperglycemia
+DIAG_188,Type 1 diabetes mellitus with hypoglycemia without coma
+DIAG_189,Type 1 diabetes mellitus with ketoacidosis with coma
+DIAG_190,Type 1 diabetes mellitus with ketoacidosis without coma
+DIAG_191,Type 1 diabetes mellitus without complications
+DIAG_192,Type 2 diabetes mellitus with hyperglycemia
+DIAG_193,Type 2 diabetes mellitus with ketoacidosis without coma
+DIAG_194,Type 2 diabetes mellitus without complications
+DIAG_195,Unspecified asthma with (acute) exacerbation
+DIAG_196,Unspecified asthma with status asthmaticus
+DIAG_197,"Unspecified pre-eclampsia, complicating childbirth"
+DIAG_198,Unspecified pre-existing hypertension complicating childbirth
+DIAG_199,Unstable angina

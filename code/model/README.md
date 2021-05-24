@@ -6,4 +6,4 @@
 
 - It is easiest to load fact data by managing dimension members separately, as part of the dimension management process. You can ensure the data load does not try to create new members by adjusting the Mapping Options
 
-![Model Mapping Options](/img/ModelMappingOptions.png)
+![Model Mapping Options](../img/ModelMappingOptions.png)

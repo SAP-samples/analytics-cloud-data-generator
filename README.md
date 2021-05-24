@@ -1,3 +1,5 @@
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/analytics-cloud-data-generator)](https://api.reuse.software/info/github.com/SAP-samples/analytics-cloud-data-generator)
+
 # SAP Analytics Cloud "Data to Value" generator (*d2v-datagen*)
 
 ## Description

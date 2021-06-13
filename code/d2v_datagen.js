@@ -12,8 +12,8 @@ const {
 	format
 } = require("mathjs");
 
-//read fields in from external file
-let pFields = prompt('Enter file name for dimension list: ');
+// read fields in from external file
+const pFields = prompt('Enter file name for dimension list: ');
 const fields = xlsx.parse('./input/' + pFields + '_fields.xlsx')[0].data[0];
 fields.push("Value");
 
@@ -30,43 +30,37 @@ const asyncParser = new AsyncParser(opts, transformOpts);
 const cartesian =
 	(...a) => a.reduce((a, b) => a.flatMap(d => b.map(e => [d, e].flat())));
 
-function genVal(obj) {
-	let val = 0;
-	let options = JSON.parse(obj["Options"]);
-	let ratio = obj["Ratio"];
-	let decimal = obj["DecimalPlaces"];
-	val = rn(options);
-	if (ratio !== 1) {
-		if (val < ratio) {
-			val = 0
-		} else {
-			val = 1
-		};
-	}
-	if (decimal !== 0) {
-		val = parseFloat(val.toFixed(decimal));
-	}
-	return val;
-};
+// https://stackoverflow.com/questions/1117916/merge-keys-array-and-values-array-into-an-object-in-javascript	
+const merge =
+	(keys, vals) => vals.reduce((valAccumulator, curVal) => {
+		return [...valAccumulator, keys.reduce((objAccumulator, curKey, keyIndex) => ({
+			...objAccumulator,
+			[curKey]: curVal[keyIndex]
+		}), {})];
+	}, []);
 
-// https://stackoverflow.com/questions/1117916/merge-keys-array-and-values-array-into-an-object-in-javascript
-function mergeKeys(keys, vals) {
-	let obj = keys.reduce((obj, key, index) => ({ ...obj,
-		[key]: vals[index]
-	}), {});
-	return obj;
-};
+// https://medium.com/javascript-scene/nested-ternaries-are-great-361bddd0f340
+const genVal =
+	(...obj) => obj.reduce((genAccumulator, curGenVal) => {
+		let val = rn(JSON.parse(curGenVal["Options"]));
+		return [...genAccumulator,
+		(curGenVal["Ratio"] === 1 && curGenVal["DecimalPlaces"] === 0)
+			? val
+			: (curGenVal["DecimalPlaces"] !== 0)
+				? parseFloat(val.toFixed(curGenVal["DecimalPlaces"]))
+				: (curGenVal["Ratio"] !== 1 && (val < curGenVal["Ratio"]))
+					? 0
+					: 1
+		]
+	}, []);
 
-function setAttributes(account, attribute) {
-	let opts = JSON.parse(account["Options"]);
-	if (opts["min"] === "property") {
-		opts["min"] = evaluate(JSON.parse(account["Properties"])["Options"]["min"], attribute);
-	}
-	if (opts["max"] === "property") {
-		opts["max"] = evaluate(JSON.parse(account["Properties"])["Options"]["max"], attribute);
-	}
-	return JSON.stringify(opts);
-};
+const setAttributes =
+	(account, attribute) => {
+		let opts = JSON.parse(account["Options"]);
+		(opts["min"] === "property") ? opts["min"] = evaluate(JSON.parse(account["Properties"])["Options"]["min"], attribute) : opts["min"];
+		(opts["max"] === "property") ? opts["max"] = evaluate(JSON.parse(account["Properties"])["Options"]["max"], attribute) : opts["max"];
+		return JSON.stringify(opts);
+	};
 
 let csv = '';
 asyncParser.processor
@@ -83,56 +77,34 @@ let attributes = [];
 if (workSheetsFromFile[workSheetsFromFile.length - 1].name === "ATT_") {
 	const workSheetsWithAtt = workSheetsFromFile.pop().data;
 	let attKey = workSheetsWithAtt.shift();
-	workSheetsWithAtt.forEach(attribute => {
-		let aObj = mergeKeys(attKey, attribute);
-		attributes.push(aObj);
-	})
-}
-let calcKey = workSheetsWithCalc.shift();
-let calcDims = workSheetsWithCalc.filter(element => element.includes("dimension"));
-let calcMeasures = workSheetsWithCalc.filter(element => element.includes("measure"));
-let measures = [];
+	attributes = merge(attKey, workSheetsWithAtt);
+};
 
-calcMeasures.forEach(measure => {
-	let mObj = mergeKeys(calcKey, measure);
-	measures.push(mObj);
-})
+const calcKey = workSheetsWithCalc.shift();
+const calcDims = workSheetsWithCalc.filter(element => element.includes("dimension"));
+const calcMeasures = workSheetsWithCalc.filter(element => element.includes("measure"));
+const measures = merge(calcKey, calcMeasures);
 
 // Create a dynamic structure from the spreadsheet definition
-let ar = [];
-workSheetsFromFile.forEach(dim => {
-	let row = dim.data;
-	row.shift();
-	ar.push(row);
-})
+const ar = workSheetsFromFile.reduce((sheetAccumulator, currentVal) => {
+	currentVal.data.shift();
+	return [...sheetAccumulator, currentVal.data]
+}, []);
 
-let cart = cartesian(...ar);
-cart.forEach((row, i) => {
+const cart = cartesian(...ar);
+cart.forEach((row) => {
 	let unit = row.pop();
-	if (calcDims.length > 0) {
-		calcDims.forEach(calc => {
-			let dObj = mergeKeys(calcKey, calc);
-			let calcVal = genVal(dObj);
-			row.push(calcVal);
-		})
-	}
-	let accountVal = measures.find(({
-		Name
-	}) => Name === unit);
+	// TODO - adapt to multiple calculated dimensions
+	if (calcDims.length > 0) row.push(genVal(...merge(calcKey, calcDims))[0]);
+	let accountVal = measures.find(obj => obj.Name === unit);
 	//attribute function
 	if (accountVal["Properties"] !== 0) {
-		let dim_row = mergeKeys(fields, row);
 		let prop_dim = JSON.parse(accountVal["Properties"])["dimension"];
-		let dim_att = dim_row[prop_dim];
-		let prop = attributes.find(function(value, index) {
-			if (value[prop_dim] === dim_att) {
-				return value
-			};
-		});
+		let prop = attributes.find(Value => Value[prop_dim] === merge(fields, [row])[0][prop_dim]);
 		accountVal["Options"] = setAttributes(accountVal, prop);
-	}
-	row.push(genVal(accountVal));
-	let merged = mergeKeys(fields, row);
+	};
+	row.push(genVal(accountVal)[0]);
+	let merged = merge(fields, [row])[0];
 	asyncParser.input.push(JSON.stringify(merged));
 })
 asyncParser.input.push(null);

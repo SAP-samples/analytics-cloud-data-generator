@@ -98,7 +98,7 @@ cart.forEach((row) => {
 	let unit = row.pop();
 	// adapted to multiple calculated dimensions - different from account measures as each dimension is a separate column
 	if (calcDims.length > 0) {
-		(Array.isArray(calcDims[0]) && calcDims.length > 1) ? row.push(genVal(merge(calcKey, calcDims))) : row.push(genVal(merge(calcKey, calcDims)));
+		row.push(genVal(merge(calcKey, calcDims)));
 	};
 	let accountVal = measures.find(obj => obj.Name === unit);
 	// attribute function

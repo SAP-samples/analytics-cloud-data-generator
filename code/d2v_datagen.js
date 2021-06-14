@@ -43,8 +43,8 @@ const merge =
 
 // https://medium.com/javascript-scene/nested-ternaries-are-great-361bddd0f340
 const genVal =
-	(...obj) => obj.reduce((genAccumulator, curGenVal) => {
-		let val = rn(JSON.parse(curGenVal["Options"]));
+	(obj) => obj.reduce((genAccumulator, curGenVal) => {
+		let val = rn(JSON.parse(curGenVal.Options));
 		return [...genAccumulator,
 		(curGenVal["Ratio"] === 1 && curGenVal["DecimalPlaces"] === 0)
 			? val
@@ -96,19 +96,20 @@ const ar = workSheetsFromFile.reduce((sheetAccumulator, currentVal) => {
 const cart = cartesian(...ar);
 cart.forEach((row) => {
 	let unit = row.pop();
-	// adapt to multiple calculated dimensions - different from account measures as each dimension is a separate column
+	// adapted to multiple calculated dimensions - different from account measures as each dimension is a separate column
 	if (calcDims.length > 0) {
-		(Array.isArray(calcDims[0]) && calcDims.length > 1) ? row.push(genVal(merge(calcKey, calcDims))) : row.push(genVal(merge(calcKey, calcDims[0]))[0]);
+		(Array.isArray(calcDims[0]) && calcDims.length > 1) ? row.push(genVal(merge(calcKey, calcDims))) : row.push(genVal(merge(calcKey, calcDims)));
 	};
 	let accountVal = measures.find(obj => obj.Name === unit);
-	//attribute function
+	// attribute function
 	if (accountVal["Properties"] !== 0) {
 		let prop_dim = JSON.parse(accountVal["Properties"])["dimension"];
 		let prop = attributes.find(Value => Value[prop_dim] === merge(fields, row)[prop_dim]);
 		accountVal["Options"] = setAttributes(accountVal, prop);
 	};
-	row.push(genVal(accountVal)[0]);
-	let merged = merge(fields, row);
+	row.push(genVal([accountVal]));
+	// flatten any container arrays we picked up along the way
+	let merged = merge(fields, row.flat());
 	asyncParser.input.push(JSON.stringify(merged));
 })
 asyncParser.input.push(null);

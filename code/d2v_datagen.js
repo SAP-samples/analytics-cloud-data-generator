@@ -44,7 +44,7 @@ const merge =
 // https://medium.com/javascript-scene/nested-ternaries-are-great-361bddd0f340
 const genVal =
 	(obj) => obj.reduce((genAccumulator, curGenVal) => {
-		let val = rn(JSON.parse(curGenVal.Options));
+		let val = rn(JSON.parse(curGenVal["Options"]));
 		return [...genAccumulator,
 		(curGenVal["Ratio"] === 1 && curGenVal["DecimalPlaces"] === 0)
 			? val

@@ -32,12 +32,14 @@ const cartesian =
 
 // https://stackoverflow.com/questions/1117916/merge-keys-array-and-values-array-into-an-object-in-javascript	
 const merge =
-	(keys, vals) => vals.reduce((valAccumulator, curVal) => {
-		return [...valAccumulator, keys.reduce((objAccumulator, curKey, keyIndex) => ({
-			...objAccumulator,
-			[curKey]: curVal[keyIndex]
-		}), {})];
-	}, []);
+	(keys, vals) => (Array.isArray(vals[0]))
+		? vals.reduce((valAccumulator, curVal) => {
+			return [...valAccumulator, keys.reduce((objAccumulator, curKey, keyIndex) => ({
+				...objAccumulator,
+				[curKey]: curVal[keyIndex]
+			}), {})];
+		}, [])
+		: keys.reduce((obj, key, index) => ({ ...obj, [key]: vals[index] }), {});
 
 // https://medium.com/javascript-scene/nested-ternaries-are-great-361bddd0f340
 const genVal =
@@ -72,7 +74,7 @@ asyncParser.processor
 const workSheetsFromFile = xlsx.parse('./input/' + pFields + '_dim.xlsx');
 // CALC_ sheet must be the last sheet and is mandatory
 const workSheetsWithCalc = workSheetsFromFile.pop().data;
-let attributes = [];
+let attributes;
 // Attributes are optional but if present must be the 2nd to last sheet
 if (workSheetsFromFile[workSheetsFromFile.length - 1].name === "ATT_") {
 	const workSheetsWithAtt = workSheetsFromFile.pop().data;
@@ -94,17 +96,19 @@ const ar = workSheetsFromFile.reduce((sheetAccumulator, currentVal) => {
 const cart = cartesian(...ar);
 cart.forEach((row) => {
 	let unit = row.pop();
-	// TODO - adapt to multiple calculated dimensions
-	if (calcDims.length > 0) row.push(genVal(...merge(calcKey, calcDims))[0]);
+	// adapt to multiple calculated dimensions - different from account measures as each dimension is a separate column
+	if (calcDims.length > 0) {
+		(Array.isArray(calcDims[0]) && calcDims.length > 1) ? row.push(genVal(merge(calcKey, calcDims))) : row.push(genVal(merge(calcKey, calcDims[0]))[0]);
+	};
 	let accountVal = measures.find(obj => obj.Name === unit);
 	//attribute function
 	if (accountVal["Properties"] !== 0) {
 		let prop_dim = JSON.parse(accountVal["Properties"])["dimension"];
-		let prop = attributes.find(Value => Value[prop_dim] === merge(fields, [row])[0][prop_dim]);
+		let prop = attributes.find(Value => Value[prop_dim] === merge(fields, row)[prop_dim]);
 		accountVal["Options"] = setAttributes(accountVal, prop);
 	};
 	row.push(genVal(accountVal)[0]);
-	let merged = merge(fields, [row])[0];
+	let merged = merge(fields, row);
 	asyncParser.input.push(JSON.stringify(merged));
 })
 asyncParser.input.push(null);

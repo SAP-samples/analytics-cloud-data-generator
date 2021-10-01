@@ -12,6 +12,7 @@
 
  - Install [NodeJS](https://nodejs.org/en/download/)
  - Your own SAP Analytics Cloud tenant or a [trial account](https://www.sap.com/products/cloud-analytics/trial.html)
+ - Install Git or clone the code from your browser
 
 ## Download and Installation
 

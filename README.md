@@ -51,7 +51,7 @@ Enter file name for dimension list: SERVICE_TIMES
 
 ## Contributing
 
-[Submit a pull request in the usual fashion](https://github.com/SAP-samples/analytics-cloud-data-generator/CONTRIBUTING.md)
+If you would like to contribute, please submit a pull request in the [usual fashion](https://github.com/SAP-samples/analytics-cloud-data-generator/blob/main/CONTRIBUTING.md)
 
 ## License
 Copyright (c) 2021 SAP SE or an SAP affiliate company. All rights reserved. This project is licensed under the Apache Software License, version 2.0 except as noted otherwise in the [LICENSE](LICENSES/Apache-2.0.txt) file.

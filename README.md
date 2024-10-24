@@ -1,5 +1,7 @@
 [![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/analytics-cloud-data-generator)](https://api.reuse.software/info/github.com/SAP-samples/analytics-cloud-data-generator)
 
+# This repository is archived as of 2024-10-24 and will no longer receive updates.
+
 # SAP Analytics Cloud "Data to Value" generator (*d2v-datagen*)
 
 ## Description
